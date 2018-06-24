@@ -1,4 +1,5 @@
 
+
 # Heaviside function with a default epsilon
 g <- function(net, epsilon=0.5) {
 	if (net > epsilon) {
@@ -49,7 +50,7 @@ perceptron.train <- function(train.table, eta=0.1, threshold=1e-2) {
 			y_i = train.table[i, ncol(train.table)]
 
 			# Now the Perceptron produces the output
-			# class using the current values for 
+			# class using the current values for
 			# weights and theta, then it applies the
 			# heaviside function
 			hat_y_i = g(x_i %*% weights + theta)
@@ -142,7 +143,7 @@ perceptron.run.simple <- function() {
 			      byrow=TRUE)
 
 	# This is a table with test examples.
-	# The last column only shows the expected 
+	# The last column only shows the expected
 	# output and it is not used in the testing stage
 	test.table = matrix(c(0.05, 0,
 			      0.15, 0,
@@ -166,5 +167,3 @@ perceptron.run.simple <- function() {
 
 	return (training.result)
 }
-
-
